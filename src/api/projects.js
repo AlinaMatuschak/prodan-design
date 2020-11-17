@@ -1,6 +1,6 @@
 export const projects = [
   {
-    url: './images/slider/slide-1.png',
+    url: 'slide-1.png',
     details: {
       category: 'Public interiors',
       name: 'Office in Kyiv',
