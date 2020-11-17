@@ -1,0 +1,21 @@
+@import "reset";
+@import "utils";
+@import "fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Pompadur, serif;
+  color: $text-color;
+  background-color: $c-gray;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+@import "./blocks/header";
+@import "./blocks/navigation";

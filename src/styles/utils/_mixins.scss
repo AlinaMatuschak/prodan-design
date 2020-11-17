@@ -1,0 +1,11 @@
+// @mixin hover($_property, $_toValue) {
+//   transition: #{$_property} 0.3s;
+//   &:hover {
+//     #{$_property}: $_toValue;
+//   }
+// }
+
+@mixin backgroundImg($img) {
+  background: url($img) center no-repeat;
+  background-size: 15px;
+}

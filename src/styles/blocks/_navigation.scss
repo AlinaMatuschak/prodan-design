@@ -1,0 +1,26 @@
+.navigation {
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__link {
+    padding: 5px 1vw;
+    margin: 0 0.5vw;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &--facebook {
+      @include backgroundImg("./../images/facebook-icon.png");
+    }
+
+    &--instagram {
+      @include backgroundImg("./../images/instagram-icon.png");
+    }
+  }
+
+  &__icon {
+    width: 15px;
+  }
+}

@@ -1,0 +1,6 @@
+/backstop_data
+/dist
+/.cache
+/.github
+
+/node_modules

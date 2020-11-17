@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 38px 3vw 0;
+
+  &__link-logo {
+    width: $logo-size;
+    height: $logo-size;
+  }
+
+  &__img-logo {
+    width: 100%;
+  }
+}
