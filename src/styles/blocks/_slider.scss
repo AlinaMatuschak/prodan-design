@@ -1,0 +1,24 @@
+.slider {
+  width: $slider-width;
+  height: $slider-height;
+
+  &__navigation {
+    display: flex;
+  }
+
+  &__button {
+    width: $slider-button-size;
+    height: $slider-button-size;
+    background-color: #fff;
+
+    &--previous {
+      // background: url(./../images/left-arrow.png) center no-repeat;
+    }
+  }
+
+  &__shadow {
+    width: 50%;
+    height: 100%;
+    background: $slider-gradient;
+  }
+}

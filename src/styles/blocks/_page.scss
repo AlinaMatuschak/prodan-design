@@ -1,0 +1,9 @@
+.page {
+  font-family: Pompadur, serif;
+  color: $text-color;
+  background-color: $c-gray;
+
+  &__header {
+    margin-bottom: 85px;
+  }
+}

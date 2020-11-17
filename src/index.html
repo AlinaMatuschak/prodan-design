@@ -11,8 +11,8 @@
       type="image/x-icon"
     >
   </head>
-  <body>
-    <header class="header">
+  <body class="page">
+    <header class="page__header header">
       <a href="/" class="header__link-logo">
         <img
           src="./images/logo.png"
@@ -62,7 +62,25 @@
       </nav>
     </header>
 
-    <main class="main">
+    <main class="page__main main">
+      <section class="main__promo promo">
+        <div>
+          <h1 class="promo__name">Nelly Prodan</h1>
+          <p class="promo__slogan">Interior architecture design</p>
+        </div>
+        <div class="promo__slider slider">
+          <div class="slider__navigation">
+            <button class="slider__button slider__button--previous">
+              <img
+                src="./images/left-arrow.png"
+                alt="left arrow"
+              >
+            </button>
+            <button class="slider__button slider__button--next"></button>
+          </div>
+          <div class="slider__shadow"></div>
+        </div>
+      </section>
     </main>
 
     <footer class="footer">

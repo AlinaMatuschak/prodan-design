@@ -6,16 +6,13 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Pompadur, serif;
-  color: $text-color;
-  background-color: $c-gray;
-}
-
 a {
   color: $text-color;
   text-decoration: none;
 }
 
+@import "./blocks/page";
 @import "./blocks/header";
 @import "./blocks/navigation";
+@import "./blocks/promo";
+@import "./blocks/slider";
