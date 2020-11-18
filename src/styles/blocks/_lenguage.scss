@@ -1,0 +1,55 @@
+.lenguage {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  width: $lenguage-width;
+  padding: 5px 1vw;
+  margin-right: 0.5vw;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    right: 20%;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("./../images/arrow-point-to-buttom.png") center no-repeat;
+    background-size: contain;
+  }
+
+  &__link {
+    height: 100%;
+    padding: 25px 0;
+    @include hover(opacity, 0.8);
+
+    &--alternetive {
+      display: none;
+
+      &::before {
+        content: "";
+        @include separator(70%);
+      }
+    }
+  }
+
+  &:hover .lenguage__link--alternetive {
+    display: block;
+  }
+
+  &:hover {
+    height: 200%;
+    margin-top: 70px;
+    background-color: #fff;
+  }
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
+}

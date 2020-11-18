@@ -1,0 +1,64 @@
+.projects {
+  text-align: center;
+
+  &__hint {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  &__categories {
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    z-index: 1;
+
+    &::before {
+      content: "";
+      @include separator(80%);
+      top: 0;
+    }
+  }
+
+  &__category {
+    @include hover(opacity, 0.8);
+  }
+
+  &__category-selector {
+    position: relative;
+    display: inline-block;
+    padding: 0 30px;
+    margin: 0 auto 0.5vw;
+    line-height: 76px;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 15px;
+      display: block;
+      width: 12px;
+      height: 12px;
+      background: url("./../images/arrow-point-to-buttom.png") center no-repeat;
+      background-size: contain;
+      transform: translateY(-50%);
+    }
+
+    &:hover {
+      background-color: #fff;
+    }
+
+    &:hover .projects__categories {
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+    }
+  }
+}

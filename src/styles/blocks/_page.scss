@@ -1,0 +1,14 @@
+.page {
+  color: $text-color;
+  background-color: $c-gray;
+
+  &__header {
+    margin-bottom: 85px;
+  }
+
+  @media (max-width: 1050px) {
+    &__header {
+      margin-bottom: 0;
+    }
+  }
+}
