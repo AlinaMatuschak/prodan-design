@@ -5,7 +5,7 @@
   align-items: center;
 
   height: 100%;
-  width: 90px;
+  width: $lenguage-width;
   padding: 5px 1vw;
   margin-right: 0.5vw;
 
@@ -27,6 +27,7 @@
   &__link {
     height: 100%;
     padding: 25px 0;
+    @include hover(opacity, 0.8);
 
     &--alternetive {
       display: none;

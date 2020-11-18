@@ -12,6 +12,7 @@
     width: 50%;
     background: $slider-gradient;
     z-index: 1;
+    pointer-events: none;
   }
 
   &__projects {
@@ -43,18 +44,19 @@
   &__control {
     width: $slider-button-size;
     height: $slider-button-size;
-    background-color: #fff;
+    background-color: $slider-controls-color;
     border-width: 0;
     opacity: 0.5;
     cursor: pointer;
     outline: none;
+    @include hover(opacity, 1);
   }
 
   .slider__control::before {
     content: "";
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: $slider-controls-size;
+    height: $slider-controls-size;
     background: transparent no-repeat center center;
     background-size: 100% 100%;
   }

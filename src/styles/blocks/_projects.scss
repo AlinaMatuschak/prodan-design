@@ -26,6 +26,10 @@
     }
   }
 
+  &__category {
+    @include hover(opacity, 0.8);
+  }
+
   &__category-selector {
     position: relative;
     display: inline-block;

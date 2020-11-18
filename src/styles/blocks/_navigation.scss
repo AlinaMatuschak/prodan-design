@@ -16,6 +16,7 @@
     padding: 5px 1vw;
     font-size: 12px;
     letter-spacing: 2px;
+    @include hover(opacity, 0.8);
   }
 
   @media (max-width: 1050px) {

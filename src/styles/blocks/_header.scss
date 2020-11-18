@@ -15,6 +15,7 @@
 
   &__img-logo {
     width: 100%;
+    @include hover(opacity, 0.8);
   }
 
   &__toggle,
@@ -37,7 +38,6 @@
 
       background: url("./../images/menu-of-three-lines.png") no-repeat center;
       background-size: 35px;
-      transition: background 0.2s;
       cursor: pointer;
     }
   }
@@ -48,7 +48,8 @@
 
   @media (max-width: 1050px) {
     padding-top: 0;
-    background-color: white;
+    height: 76px;
+    background-color: $mobile-background;
 
     &__link-logo {
       display: none;
