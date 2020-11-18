@@ -9,3 +9,14 @@
   background: url($img) center no-repeat;
   background-size: 15px;
 }
+
+@mixin separator($width) {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  display: block;
+  width: $width;
+  height: 1px;
+  background-color: #24242454;
+  transform: translate(50%);
+}

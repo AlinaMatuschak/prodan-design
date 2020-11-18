@@ -1,29 +1,63 @@
-import { projects } from '../api/projects';
+import { loadProjectsToSlider } from '../helpers/loadProjectsToSlider';
 
 const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.slider__button--previous');
-const nextButton = document.querySelector('.slider__button--next');
+const sliderWrapper = slider.querySelector('.slider__projects');
 
-let slideIndex = 0;
+loadProjectsToSlider(sliderWrapper);
 
-showSlides(slideIndex);
+const sliderItems = slider.querySelectorAll('.slider__item');
+const sliderControls = slider.querySelectorAll('.slider__controls');
 
-prevButton.addEventListener('click', () => {
-  showSlides(slideIndex -= 1);
+let positionLeftItem = 0;
+let transform = 0;
+const items = [];
+
+sliderItems.forEach((item, index) => {
+  items.push({
+    item: item,
+    position: index,
+    transform: 0,
+  });
 });
 
-nextButton.addEventListener('click', () => {
-  showSlides(slideIndex += 1);
+const position = {
+  getMin: 0,
+  getMax: items.length - 1,
+};
+
+const transformItem = direction => {
+  if (direction === 'right') {
+    if (positionLeftItem >= position.getMax) {
+      positionLeftItem = 0;
+      transform = 0;
+    } else {
+      positionLeftItem++;
+      transform -= 100;
+    }
+  }
+
+  if (direction === 'left') {
+    if (positionLeftItem <= position.getMin) {
+      positionLeftItem = position.getMax;
+      transform = position.getMax * (-100);
+    } else {
+      positionLeftItem--;
+      transform += 100;
+    }
+  }
+
+  sliderWrapper.style.transform = `translateX(${transform}%)`;
+};
+
+const controlClick = ({ target }) => {
+  if (target.classList.contains('slider__control')) {
+    const isControlRight = target.classList.contains('slider__control--right');
+    const direction = isControlRight ? 'right' : 'left';
+
+    transformItem(direction);
+  }
+};
+
+sliderControls.forEach(item => {
+  item.addEventListener('click', controlClick);
 });
-
-function showSlides(n) {
-  if (n >= projects.length) {
-    slideIndex = 0;
-  }
-
-  if (n < 0) {
-    slideIndex = projects.length - 1;
-  }
-
-  slider.style['background-image'] = `url(${projects[slideIndex].url})`;
-}
