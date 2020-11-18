@@ -1,8 +1,15 @@
 .slider {
-  width: $slider-width;
+  position: relative;
+  width: 50%;
   height: $slider-height;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // transition: background-image 1s;
 
   &__navigation {
+    position: absolute;
+    bottom: 0;
+    right: 0;
     display: flex;
   }
 
@@ -10,10 +17,9 @@
     width: $slider-button-size;
     height: $slider-button-size;
     background-color: #fff;
-
-    &--previous {
-      // background: url(./../images/left-arrow.png) center no-repeat;
-    }
+    opacity: 0.4;
+    cursor: pointer;
+    outline: none;
   }
 
   &__shadow {

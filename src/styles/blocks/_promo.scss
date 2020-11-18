@@ -2,4 +2,49 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: right;
+  width: 85%;
+
+  &__inf {
+    width: 35%;
+  }
+
+  &__name {
+    font-size: 100px;
+    letter-spacing: 3px;
+  }
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
+
+  @media (max-width: 1600px) {
+    &__name {
+      font-size: 90px;
+    }
+  }
+
+  @media (max-width: 1500px) {
+    &__name {
+      font-size: 80px;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    &__name {
+      font-size: 70px;
+    }
+  }
+
+  @media (max-width: 1300px) {
+    &__name {
+      font-size: 60px;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__name {
+      font-size: 50px;
+    }
+  }
 }

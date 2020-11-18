@@ -4,23 +4,23 @@
     list-style: none;
   }
 
-  &__link {
-    padding: 5px 1vw;
+  &__item {
     margin: 0 0.5vw;
-    font-size: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 
-    &--facebook {
-      @include backgroundImg("./../images/facebook-icon.png");
-    }
-
-    &--instagram {
-      @include backgroundImg("./../images/instagram-icon.png");
+    &:last-child {
+      margin-right: 0;
     }
   }
 
-  &__icon {
-    width: 15px;
+  &__link {
+    padding: 5px 1vw;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  @media (max-width: 1050px) {
+    &__list {
+      display: none;
+    }
   }
 }

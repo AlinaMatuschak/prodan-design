@@ -9,10 +9,16 @@
 a {
   color: $text-color;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 @import "./blocks/page";
 @import "./blocks/header";
 @import "./blocks/navigation";
+@import "./blocks/lenguage";
+@import "./blocks/source";
+@import "./blocks/navigation-mobile.scss";
+@import "./blocks/logo-mobile.scss";
+@import "./blocks/main";
 @import "./blocks/promo";
 @import "./blocks/slider";

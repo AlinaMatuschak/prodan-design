@@ -1,0 +1,15 @@
+.logo-mobile {
+  display: none;
+  padding: 10px;
+
+  &__img {
+    display: block;
+    width: 216px;
+    height: 216px;
+    margin: auto;
+  }
+
+  @media (max-width: 1050px) {
+    display: block;
+  }
+}

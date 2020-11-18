@@ -42,33 +42,76 @@
           <li class="navigation__item">
             <a href="/" class="navigation__link">Contacts</a>
           </li>
-
-          <li class="navigation__item">
-            <a href="/" class="navigation__link">En</a>
-          </li>
-
-          <li class="navigation__item">
-            <a
-              href="https://www.facebook.com/prodandesign"
-              class="navigation__link navigation__link--facebook"
-            >
-            </a>
-          </li>
-
-          <li class="navigation__item">
-            <a href="/" class="navigation__link navigation__link--instagram"></a>
-          </li>
         </ul>
+
+        <div class="navigation-mobile">
+          <ul class="navigation-mobile__list">
+            <li class="navigation-mobile__item">
+              <a href="/" class="navigation-mobile__link">Who we are</a>
+            </li>
+
+            <li class="navigation-mobile__item">
+              <a href="/" class="navigation-mobile__link">Our projects</a>
+            </li>
+
+            <li class="navigation-mobile__item">
+              <a href="/" class="navigation-mobile__link">Price and services</a>
+            </li>
+
+            <li class="navigation-mobile__item">
+              <a href="/" class="navigation-mobile__link">How we work</a>
+            </li>
+
+            <li class="navigation-mobile__item">
+              <a href="/" class="navigation-mobile__link">Contacts</a>
+            </li>
+          </ul>
+        </div>
       </nav>
+
+      <div class="lenguage">
+        <a href="/" class="lenguage__link lenguage__link--main">En</a>
+        <a href="/" class="lenguage__link lenguage__link--alternetive">Ru</a>
+      </div>
+
+      <div class="source">
+        <a
+          href="https://www.facebook.com/prodandesign"
+          class="source__link source__link--facebook"
+        >
+        </a>
+        <a href="/" class="source__link source__link--instagram"></a>
+      </div>
+
+      <input
+        type="checkbox"
+        name="toggle"
+        id="toggle"
+        class="header__toggle"
+      >
+      <label
+        for="toggle"
+        class="header__toggle-label">
+      </label>
     </header>
+
+    <div class="page__logo-mobile logo-mobile">
+      <img
+        src="./images/mobile-logo.png"
+        alt="logo"
+        class="logo-mobile__img"
+      >
+    </div>
 
     <main class="page__main main">
       <section class="main__promo promo">
-        <div>
+        <div class="promo__inf">
           <h1 class="promo__name">Nelly Prodan</h1>
           <p class="promo__slogan">Interior architecture design</p>
         </div>
         <div class="promo__slider slider">
+          <div class="slider__projects"></div>
+
           <div class="slider__navigation">
             <button class="slider__button slider__button--previous">
               <img
@@ -76,15 +119,17 @@
                 alt="left arrow"
               >
             </button>
-            <button class="slider__button slider__button--next"></button>
+            <button class="slider__button slider__button--next">
+              <img
+                src="./images/right-arrow.png"
+                alt="right arrow"
+              >
+            </button>
           </div>
           <div class="slider__shadow"></div>
         </div>
       </section>
     </main>
-
-    <footer class="footer">
-    </footer>
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>

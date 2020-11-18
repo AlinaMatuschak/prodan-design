@@ -1,0 +1,26 @@
+.source {
+  display: flex;
+  height: 100%;
+
+  &__link {
+    display: block;
+    width: 15px;
+    height: 100%;
+    padding: 5px 1vw;
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    &--facebook {
+      margin-right: 1vw;
+      @include backgroundImg("./../images/facebook-icon.png");
+    }
+  
+    &--instagram {
+      @include backgroundImg("./../images/instagram-icon.png");
+    }
+  }
+
+  @media (max-width: 1050px) {
+    display: none;
+  }
+}
