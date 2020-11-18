@@ -1,8 +1,4 @@
 .project {
-  &:hover .project__info {
-    opacity: 0.7;
-  }
-
   &__image {
     height: inherit;
     width: 100%;
@@ -22,6 +18,10 @@
     transition: opacity 0.4s;
   }
 
+  &:hover .project__info {
+    opacity: 0.7;
+  }
+
   &__category {
     margin: 5% 0 17.5%;
     color: $project-category-color;
@@ -36,14 +36,14 @@
   }
 
   @media (max-width: 1050px) {
-    &:hover .project__info {
-      opacity: 1;
-    }
-
     &__info {
       position: static;
       padding: 12px;
       background-color: transparent;
+      opacity: 1;
+    }
+
+    &:hover .project__info {
       opacity: 1;
     }
 
