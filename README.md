@@ -1,6 +1,6 @@
 # Prodan
 
-Small page with menu, slider and animation.
+Small page with menu, slider and gallery.
 - [Demo](https://alinamatuschak.github.io/prodan-design/)
 
 ## Local deployment
